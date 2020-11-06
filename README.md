@@ -1,7 +1,7 @@
 ## Full Stack Template
 # Booting
 ```shell
-git pull template
+git pull template https://github.com/hbracy/template.git/
 npm install
 hygen init self
 cd frontend
