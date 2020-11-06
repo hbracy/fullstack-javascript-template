@@ -11,35 +11,13 @@ describe('#/Test-object Database API', () => {
   };
   // Tests:
   // Partially Generated Code
-  describe('#/testGeneratedCode3', () => {
-    it('should testGeneratedCode3', async () => {
-      let testData = ''
-        // TODO
-        // Example:
-        // let testOutput = await testObjectsAPI.testGeneratedCode3(existingTestUser, testData);
-        // assert.equal(testOutput, true);
-    });
-  });
-
-  // Partially Generated Code
-  describe('#/testGeneratedCode2', () => {
-    it('should testGeneratedCode2', async () => {
-      let testData = ''
-        // TODO
-        // Example:
-        // let testOutpDut = await testObjectsAPI.testGeneratedCode2(existingTestUser, testData);
-        // assert.equal(testOutpDut, true);
-    });
-  });
-
-  // Partially Generated Code
   describe('#/testGeneratedCode', () => {
     it('should testGeneratedCode', async () => {
-      let testData = ''
+      let inputData = ''
         // TODO
         // Example:
-        // let testOutput = await testObjectsAPI.testGeneratedCode(existingTestUser, testData);
-        // assert.equal(testOutput, true);
+        // let outputData = await testObjectsAPI.testGeneratedCode(existingTestUser, inputData);
+        // assert.equal(outputData, true);
     });
   });
 

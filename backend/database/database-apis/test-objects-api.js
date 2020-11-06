@@ -2,51 +2,15 @@
 const coreDb = require('../core-db');
 const ObjectId = require('mongodb').ObjectID;
 
-
 // Partially Generated Code
-async function testGeneratedCode(testData) {
+async function testGeneratedCode(inputData) {
   const db = await coreDb.getOrConnect();
   let payload = null;
-  console.log(testData)
+  console.log('TODO: Write db query at backend/database/database-apis/test-objects-api.js for input', inputData)
   try {
     // TODO
     // Example: 
-    payload = await db.collection('testObjects').insertOne({'testData': testData.param1});
-
-  } catch (err) {
-    console.error(err);
-    payload = false;
-  }
-  return payload;
-}
-
-
-// Partially Generated Code
-async function testGeneratedCode2(testData) {
-  const db = await coreDb.getOrConnect();
-  let payload = null;
-  console.log('TODO: Write db query at backend/database/database-apis/test-objects-api.js for input', testData)
-  try {
-    // TODO
-    // Example: 
-    payload = await db.collection('testObjects').insertOne({'email': testData.param1});
-
-  } catch (err) {
-    console.error(err);
-    payload = false;
-  }
-  return payload;
-}
-
-// Partially Generated Code
-async function testGeneratedCode3(testData) {
-  const db = await coreDb.getOrConnect();
-  let payload = null;
-  console.log('TODO: Write db query at backend/database/database-apis/test-objects-api.js for input', testData)
-  try {
-    // TODO
-    // Example: 
-    payload = await db.collection('testObjects').insertOne({'email': testData.param1});
+    payload = await db.collection('testObjects').insertOne({'email': inputData.param1});
 
   } catch (err) {
     console.error(err);
@@ -56,8 +20,6 @@ async function testGeneratedCode3(testData) {
 }
 
 module.exports = {
-  testGeneratedCode3: testGeneratedCode3,
-  testGeneratedCode2: testGeneratedCode2,
   testGeneratedCode: testGeneratedCode,
 
 }

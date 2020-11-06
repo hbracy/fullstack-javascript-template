@@ -1,8 +1,8 @@
 ---
 inject: true
 to: backend/startup/register-routes.js
-skip_if: "<%= functionName %>"
-after: "// Register protected listeners here"
+skip_if: "<%= h.changeCase.camel(name, {splitRegexp: /-/g}) %>Controller(router)"
+after: "// Register controllers here"
 ---
 
   <%= h.changeCase.camel(name, {splitRegexp: /-/g}) %>Controller(router); // Partially Generated Code

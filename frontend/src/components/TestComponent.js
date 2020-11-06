@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
-import { testGeneratedCode3 } from '../actions/NetworkActions.js';
+import { testGeneratedCode } from '../actions/NetworkActions.js';
 import TextField from '@material-ui/core/TextField';
 import MyContainer from './MyContainer';
 import Button from '@material-ui/core/Button';
@@ -20,7 +20,7 @@ function TestComponent(props) {
   };
 
   function handleClick() {
-    props.dispatch(testGeneratedCode3(text))
+    props.dispatch(testGeneratedCode(text))
   }
 
   return (

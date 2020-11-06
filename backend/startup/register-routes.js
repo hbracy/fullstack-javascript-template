@@ -10,13 +10,11 @@ module.exports = function(app) {
 
   app.use(express.json());
   app.use(router);
+  // Register controllers here
+  testObjectController(router); // Partially Generated Code
+  testObjectController(router); // Partially Generated Code
+  testObjectController(router); // Partially Generated Code
   indexController(router);
-  // Register protected listeners here
-  testObjectController(router); // Partially Generated Code
-  testObjectController(router); // Partially Generated Code
-  testObjectController(router); // Partially Generated Code
-  testObjectController(router); // Partially Generated Code
-  testObjectController(router); // Partially Generated Code
 
   // Protect all reserved routes
   router.use('/reserved', function(req, res, next) {
@@ -38,6 +36,6 @@ module.exports = function(app) {
       res.send(false);
     }
   });
-  testObjectController(router); // Partially Generated Code
+
 
 };

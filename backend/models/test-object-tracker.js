@@ -13,28 +13,10 @@ function TestObjectTracker() {
   // }
 
   // Partially Generated Code
-  this.testGeneratedCode = async function testGeneratedCode(testData) {
-    console.log('data', testData);
+  this.testGeneratedCode = async function testGeneratedCode(inputData) {
+    console.log('data', inputData);
     // TODO
-    let payload = await testObjectsAPI.testGeneratedCode(testData);
-    // console.log('payload', payload);
-    return payload;
-  }
-
-  // Partially Generated Code
-  this.testGeneratedCode2 = async function testGeneratedCode2(testData) {
-    console.log('data', testData);
-    // TODO
-    let payload = await testObjectsAPI.testGeneratedCode2(testData);
-    // console.log('payload', payload);
-    return payload;
-  }
-
-  // Partially Generated Code
-  this.testGeneratedCode3 = async function testGeneratedCode3(testData) {
-    console.log('data', testData);
-    // TODO
-    let payload = await testObjectsAPI.testGeneratedCode3(testData);
+    let payload = await testObjectsAPI.testGeneratedCode(inputData);
     // console.log('payload', payload);
     return payload;
   }

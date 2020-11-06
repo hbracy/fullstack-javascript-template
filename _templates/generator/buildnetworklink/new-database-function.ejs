@@ -13,7 +13,7 @@ async function <%= functionName %>(<%= inputName %>) {
   try {
     // TODO
     // Example: 
-    // payload = await db.collection('<%=  h.changeCase.camel(name, {splitRegexp: /-/g}) %>s').findOne({'_id': new ObjectId(<%= inputName %>)});
+    // payload = await db.collection('<%=  h.changeCase.camel(name, {splitRegexp: /-/g}) %>s').insertOne({'email': <%= inputName %>.param1});
 
   } catch (err) {
     console.error(err);
