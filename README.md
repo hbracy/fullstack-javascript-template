@@ -1,9 +1,8 @@
 ## Full Stack Template
 # Booting
 ```shell
-git pull https://github.com/hbracy/template.git/
-npm install
-hygen init self
+git clone https://github.com/hbracy/template.git/
+cd template
 cd frontend
 npm install
 cd ../backend
