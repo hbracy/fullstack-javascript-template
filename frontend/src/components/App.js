@@ -14,9 +14,9 @@ export default function App() {
   return (
     <Provider store={store}>
       <Container>
-        <Header title={'Title'}/>
+        <Header title={'Template'} />
         <Main />
-        <Footer />
+        <Footer title={'Template'} />
       </Container>
     </Provider>
   );
