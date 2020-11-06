@@ -2,8 +2,8 @@
 
 ## Summary
 This template has everything you need to build a full stack application using only Javascript. Includes:
-* Full networking generator to build APIs in seconds.
-* MongoDB.
+* Full stack networking generator to build APIs in seconds
+* MongoDB
 * React/Redux
 * Test cases
 * MaterialUI

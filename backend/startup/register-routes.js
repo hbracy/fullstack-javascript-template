@@ -12,8 +12,6 @@ module.exports = function(app) {
   app.use(router);
   // Register controllers here
   testObjectController(router); // Partially Generated Code
-  testObjectController(router); // Partially Generated Code
-  testObjectController(router); // Partially Generated Code
   indexController(router);
 
   // Protect all reserved routes

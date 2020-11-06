@@ -4,4 +4,4 @@ to: backend/app.js
 skip_if: "<%= name %>"
 after: "ALWAYS COMMENT OUT WHEN DONE"
 ---
-  // require('./database/call-once/<%= name %>s-setup.js').setup<%= h.changeCase.pascal(name, {splitRegexp: /-/g}) %>();
+  require('./database/call-once/<%= name %>s-setup.js').setup<%= h.changeCase.pascal(name, {splitRegexp: /-/g}) %>();
