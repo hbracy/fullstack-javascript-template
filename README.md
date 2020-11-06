@@ -17,7 +17,7 @@ To start the frontend:
 
 To use the generator:
 ```shell
-hygen generator buildnetworklink --name test-object --functionName testGeneratedCode --inputName dummyData
+hygen generator buildnetworklink --name test-object --functionName testGeneratedCode --inputName inputData --outputName outputData
 ```
 That's it!
 
