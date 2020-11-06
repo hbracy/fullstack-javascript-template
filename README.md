@@ -1,5 +1,14 @@
 # Full Stack Template
 
+## Summary
+This template has everything you need to build a full stack application using only Javascript. Includes:
+* Full networking generator to build APIs in seconds.
+* MongoDB.
+* React/Redux
+* Test cases
+* MaterialUI
+* Turnkey setup
+
 ## Setup
 ```shell
 git clone https://github.com/hbracy/fullstack-javascript-template.git
