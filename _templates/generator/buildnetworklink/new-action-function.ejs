@@ -1,0 +1,66 @@
+---
+inject: true
+to: frontend/src/actions/NetworkActions.js
+skip_if: "function <%= functionName %>"
+append: true
+---
+
+// Partially Generated Code
+export function <%= functionName %>(param1, param2) {
+  // console.log('Calling action function with params', param1, param2);
+  
+  // TODO
+  // Example:
+  const <%= inputName %> = {
+    param1: param1,
+    param2: param2
+  }
+
+  const options = {
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
+  }
+
+  return async (dispatch) => { 
+    store.dispatch({
+      type: <%= h.changeCase.constant(functionName) %>
+    });
+
+    axios.post(process.env.REACT_APP_URL + '/<%= functionName %>', <%= inputName %>, options).then(response => {
+      // console.log('RECIEVED MESSAGE FROM', '/<%= functionName %>', <%= outputName %>)
+      let <%= outputName %> = response.data;
+      if (<%= outputName %>) {
+        store.dispatch({
+          type: <%= h.changeCase.constant(functionName) %>_COMPLETED,
+          <%= outputName %>
+        });
+      } else {
+        const notificationOpts = {
+          title: 'ERROR',
+          message: '<%= functionName %> Network function gave error',
+          position: 'tc',
+          autoDismiss: 3,
+        };
+
+        store.dispatch({
+          type: <%= h.changeCase.constant(functionName) %>_FAILED,
+        });
+
+        store.dispatch(Notifications.error(notificationOpts));
+      }
+    }).catch(err => {
+      console.error(err)
+      const notificationOpts = {
+        title: 'ERROR',
+        message: '<%= functionName %> Network request failed',
+        position: 'tc',
+        autoDismiss: 3,
+      };
+      store.dispatch({
+        type: <%= h.changeCase.constant(functionName) %>_FAILED,
+      });
+      store.dispatch(Notifications.error(notificationOpts));
+    });;
+  }
+}

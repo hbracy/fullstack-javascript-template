@@ -1,0 +1,21 @@
+---
+to: backend/database/call-once/<%= name %>s-setup.js
+unless_exists: true
+---
+
+// Partially Generated Code
+const coreDb = require('../core-db');
+let db = coreDb.get();
+
+function setup<%= h.changeCase.pascal(name, {splitRegexp: /-/g}) %>() {
+  console.log('SETTING UP <%= name %>')
+  // TODO
+  // Example:
+  // db.collection('<%=  h.changeCase.camel(name, {splitRegexp: /-/g}) %>ss').createIndex( { 'email': 1 }, { unique: true } )
+  // db.collection('users').createIndex( { "createdAt": 1 }, { expireAfterSeconds: 86400 } )
+
+}
+
+module.exports = {
+  setup<%= h.changeCase.pascal(name, {splitRegexp: /-/g}) %>: setup<%= h.changeCase.pascal(name, {splitRegexp: /-/g}) %>,
+}

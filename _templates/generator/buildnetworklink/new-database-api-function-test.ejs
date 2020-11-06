@@ -1,0 +1,16 @@
+---
+inject: true
+to: backend/database/tests/<%= name %>s-api.test.js
+skip_if: "<%= functionName %>"
+after: "// Tests:"
+---
+  // Partially Generated Code
+  describe('#/<%= functionName %>', () => {
+    it('should <%= functionName %>', async () => {
+      let <%= inputName %> = ''
+        // TODO
+        // Example:
+        // let <%= outputName %> = await <%=  h.changeCase.camel(name, {splitRegexp: /-/g}) %>sAPI.<%= functionName %>(existingTestUser, <%= inputName %>);
+        // assert.equal(<%= outputName %>, true);
+    });
+  });

@@ -1,0 +1,889 @@
+
+
+
+/*let headerHeight = Dimensions.get('window').height / 7;
+let deviceWidth = Dimensions.get('window').width;
+let deviceHeight = Dimensions.get('window').height;
+*/
+
+:root {
+  --standardMargin: 10px;
+
+  /* First template */  
+  
+  /*--base1: #d1ccc7;*/
+  --base1: #fafbfc;
+  --base2: #323232;
+  --base3: #6d6d6d;
+
+  --base4: #000000;
+  --base5: #d1ccc7;
+  --base6: #0084ff;
+  --white: #ffffff;
+  --darkRed: #66154b;
+  --lightRed: #9f2278;
+
+  /* Second template */
+  /*--base1: #0cb0ba;
+  --base2: #F04A00;
+  --base3: #ba160c;
+
+  --base4: #52ebf4;
+  --base5: #d1ccc7;
+  --white: #ffffff;
+  --darkRed: #66154b;*/
+
+  /* Third Template */
+  /*--base1: #6d6d6d;
+  --base2: #000000;
+  --base3: #ffffff;
+
+  --base4: #000000;
+  --base5: #d1ccc7;
+  --white: #ffffff;
+  --darkRed: #66154b;*/
+
+  /* Fifth Template */
+  /*--base1: #000000;
+  --base2: #ffffff;
+  --base3: #000000;
+
+  --base4: #000000;
+  --base5: #d1ccc7;
+  --white: #ffffff;
+  --darkRed: #66154b;*/
+
+
+
+
+}
+
+.defaultTheme {
+  @extend .baseTheme;
+  --base1: #d1ccc7;
+  --base3: #6d6d6d;
+  --base2: #323232;
+  --base4: #000000;
+  --base5: #d1ccc7;
+  --white: #ffffff;
+  --darkRed: #66154b;
+  --lightRed: #9f2278;
+
+}
+
+
+.base2 {
+  background-color: var(--base2);
+  /*color: white;*/
+}
+.base1 {
+  background-color: var(--base1);
+}
+
+.base3 {
+  background-color: var(--base3);
+}
+.base4 {
+  background-color: var(--base4);
+}
+.base5 {
+  background-color: var(--base5);
+}
+.base6 {
+  background-color: var(--base6);
+}
+.white {
+  background-color: var(--white);
+}
+.darkRed {
+  background-color: var(--darkRed);
+}
+.lightRed {
+  background-color: var(--lightRed);
+}
+
+.brightRed {
+  background-color: #ff0000;
+}
+
+.baseTheme {
+
+}
+
+/*standardMargin = 10;
+
+conditionalWidth = '25%'
+conditionalContainer = 5
+if (deviceWidth < 600) {
+  conditionalWidth = '50%';
+  conditionalContainer = 1;
+}
+*/
+.zIndex1 {
+  z-index: 1;
+}
+
+
+.container1 {
+  display: flex;
+  flex: 1;
+
+/*  flex-grow: 1;*/
+/*  flex-shrink: 0
+*/
+}
+
+.container2 {
+  flex: 2;
+/*  flexShrink: 0
+*/
+}
+
+.container3 {
+  flex: 3;
+/*  flexShrink: 0
+*/
+}
+.container4 {
+  flex: 4;
+/*  flexShrink: 0
+*/
+}
+.container5 {
+  flex: 5;
+/*  flexShrink: 0*/
+}
+
+.container6 {
+  flex: 6;
+/*  flexShrink: 0*/
+}
+
+.container7 {
+  flex: 7;
+  flex-shrink: 0
+}
+
+.container8 {
+  display: flex;
+  flex: 8;
+
+/*  flex-shrink: 0
+*/}
+.container9 {
+  display: flex;
+
+  flex: 9;
+/*  flexShrink: 0*/
+}
+.container10 {
+  flex: 10;
+/*  flexShrink: 0*/
+}
+
+/*.conditionalContainer {
+  flex: conditionalContainer;
+
+  flexShrink: 0
+}
+*/
+
+/*flex1 {
+  flex: 1
+}
+flex0 {
+  flex: 0
+}
+
+
+zIndex2 {
+  zIndex: 2
+}
+zIndex3 {
+  zIndex: 3
+}
+zIndex4 {
+  zIndex: 4
+}
+zIndex5 {
+  zIndex: 5
+}
+
+*/
+.zIndex6 {
+  z-index: 6;
+}
+.flexRow {
+  flex-direction: row;
+
+}
+
+.flexColumn {
+  flex-direction: column;
+}
+
+.rowReverse {
+  flex-direction: row-reverse;
+}
+.marginRight {
+  justify-content: flex-end;
+}
+
+/*alwaysBiggerThanChildren {
+  alignSelf: 'flex-start'
+}
+*/
+.centered {
+  align-items: center
+}
+
+/*.fixedHeader {
+  min-height: headerHeight;
+  lineHeight: headerHeight;
+  marginBottom: headerHeight
+}
+*/
+.hiddenOverflow {
+  overflow: hidden;
+}
+
+.leftRight {
+  position: absolute;
+  left: 0;
+  right: 0
+}
+
+.sixtyPercentWidth {
+  width: 60%
+}
+
+.fullDeviceWidth {
+/*  width: Dimensions.get('window').width
+*/
+  width: 100vw;
+}
+.fullDeviceHeight {
+/*  height: Dimensions.get('window').height
+*/
+  height: 100vh;
+}
+
+.eightyPercentDeviceWidth {
+/*  width: Dimensions.get('window').width * 0.8*/
+  width: 80vw;
+}
+
+.eightyPercentDeviceHeight {
+/*  height: Dimensions.get('window').height * 0.8*/
+  height: 80vh;
+}
+/*
+base1 {
+  backgroundColor: theme.base1
+}
+base2 {
+  backgroundColor: theme.base2;
+}
+base3 {
+  backgroundColor: theme.base3
+}
+base4 {
+  backgroundColor: theme.base4
+}
+
+base5 {
+  backgroundColor: theme.base5
+}
+
+darkRed {
+  backgroundColor: theme.darkRed
+}
+*/
+
+.noColor {
+  background-color: transparent;
+}
+
+.whiteText {
+  color: white;
+}
+
+.redText {
+  color: #9f2278
+}
+.darkRedText {
+  color: #66154b
+}
+
+.base1Text {
+  color: var(--base1);
+}
+
+.base2Text {
+  color: var(--base2);
+
+}
+.base3Text {
+  color: var(--base3);
+
+}
+.base4Text {
+  color: var(--base4);
+}
+.base5Text {
+  color: var(--base5);
+
+}
+
+.verticalCenter {
+  justify-content: center;
+}
+
+.flexStartRight {
+  align-self: flex-end;
+}
+
+
+.mediumFont {
+  font-size: 20;
+}
+
+.smallFont {
+  font-size: 10;
+}
+
+.boldText {
+  font-weight: bold;
+}
+
+.textAlignRight {
+  text-align: right
+}
+
+.flexEnd {
+  justify-content: flex-end;
+}
+
+/*popdownBox {
+  backgroundColor: theme.base4;
+  borderColor: '#888';
+  borderRadius: 10
+}
+*/
+.topBottomPadding {
+  padding-bottom: var(--standardMargin);
+  padding-top: var(--standardMargin);
+}
+
+.sidePadding {
+  padding-left: var(--standardMargin);
+  padding-right: var(--standardMargin);
+}
+
+
+.right {
+  right: 0
+}
+
+.left {
+  left: 0
+}
+
+
+
+/*conditionalWidth {
+  width: conditionalWidth
+}
+*/
+.twentyPercentHeight {
+  height: 20%;
+}
+.tenPercentHeight {
+  height: 10%;
+}
+
+.seventyPercentHeight {
+  height: 70%;
+}
+.eightyPercentWidth {
+  width: 80%;
+}
+.eightyPercentHeight {
+  height: 80%;
+}
+.ninetyPercentHeight {
+  height: 90%;
+}
+.ninetyPercentWidth {
+  width: 90%;
+}
+.ninetyFivePercentWidth {
+  width: 95%;
+}
+.ninetyPercentDeviceWidth {
+  width: 90vw;
+}
+.ninetyPercentDeviceHeight {
+  height: 90vh;
+}
+
+.slightlyCurvedTransparentBorder {
+  border-style: solid;
+  border-width: 2px;
+  border-color: transparent;
+  border-radius: 5px
+}
+
+.transparentBorder {
+  border-style: solid;
+  border-width: 5px;
+  border-color: transparent;
+  border-radius: 5px
+}
+
+
+
+.curvedBase2Border {
+  border-style: solid;
+  border-width: 5px;
+  border-color: var(--base2);
+  border-radius: 10px;
+}
+
+.curvedBase3Border {
+  border-style: solid;
+  border-width: 5px;
+  border-color: var(--base3);
+  border-radius: 10px;
+}
+
+.curvedBase1Border {
+  border-style: solid;
+  border-width: 5px;
+  border-color: var(--base1);
+  border-radius: 10px;
+}
+.slightlyCurvedBase1Border {
+  border-style: solid;
+  border-width: 5px;
+  border-color: var(--base1);
+  border-radius: 5px
+}
+.curvedBase4Border {
+  border-style: solid;
+  border-width: 5px;
+  border-color: var(--base4);
+  border-radius: 10px
+}
+.curvedBase5Border {
+  border-style: solid;
+  border-width: 5px;
+  border-color: var(--base2);
+  border-radius: 10px
+}
+.curvedWhiteBorder {
+  border-style: solid;
+  border-width: 5px;
+  border-color: var(--white);
+  border-radius: 10px
+}
+
+.flexGrowZero {
+  flex-grow: 1
+}
+.flexShrink {
+  flex-shrink: 1
+}
+.eightyPercentMaxHeight {
+  max-height: 80%;
+}
+
+.eightyPercentMaxWidth {
+  max-width: 20%;
+}
+
+
+.fullMaxHeight {
+  max-height: 100%;
+}
+
+
+
+/*
+.verticalPadding {
+  padding-vertical: 20;
+}*/
+
+/*.horizontalPadding {
+  padding-orizontal: 20;
+}
+*/
+
+.columnReverse {
+  flex-direction: column-reverse
+}
+
+.spaceAround {
+  justify-content: space-around;
+}
+
+.padding {
+  padding-left: var(--standardMargin);
+  padding-right: var(--standardMargin);
+  padding-top: var(--standardMargin);
+  padding-bottom: var(--standardMargin);
+
+}
+
+.thirtyPercentMinHeight {
+  min-height: 50%;
+}
+
+.leftPadding {
+  padding-left: var(--standardMargin);
+}
+
+.topMargin {
+  margin-top: var(--standardMargin);
+}
+
+.sideMargins {
+  margin-right: var(--standardMargin);
+  margin-left: var(--standardMargin);
+}
+
+.allAroundMargin {
+  margin-top: var(--standardMargin);
+  margin-bottom: var(--standardMargin);
+  margin-right: var(--standardMargin);
+  margin-left: var(--standardMargin);
+}
+
+.slightAllAroundMargin {
+  margin-top: calc(var(--standardMargin) / 4);
+  margin-bottom: calc(var(--standardMargin) / 4);
+  margin-right: calc(var(--standardMargin) / 4);
+  margin-left: calc(var(--standardMargin) / 4);
+}
+
+
+/*.allAroundMargin {
+  margin-top: 10;
+  margin-bottom: 10;
+  margin-right: 10;
+  margin-left: 10;
+}
+*/
+.allAroundMarginExceptBottom {
+  margin-top: var(--standardMargin);
+  margin-right: var(--standardMargin);
+  margin-left: var(--standardMargin);
+}
+
+.wrapWords {
+  overflow-wrap: anywhere; /* Firefox */ 
+  word-break: break-word; /* Chrome, Safari */
+}
+
+.bottomBorder {
+  border-bottom-color: black;
+  border-bottom-width: 5;
+}
+.bottomMargin {
+  margin-bottom: var(--standardMargin);
+}
+.centerText {
+  text-align: center;
+}
+
+.full {
+  width: 100%;
+  height: 100%;
+}
+.fullWidth {
+  width: 100%;
+}
+.fullHeight {
+  height: 100%;
+}
+
+.opaque {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+
+.opaqueText {
+  color: rgba(0, 0, 0, 0.5);
+}
+.solid {
+  opacity: 1;
+
+}
+
+.inlineDisplay {
+  display: inline-block;
+}
+
+.maxContent {
+  height: max-content;
+}
+
+.centerCenter {
+  align-items: center;
+  justify-content: center;
+}
+.oneThirdWidth {
+  width: 33%;
+}
+.doubleWidth {
+  width: 200%;
+}
+.halfHeight {
+  height: 50%;
+}
+.halfWidth {
+  width: 50%;
+}
+.quarterWidth {
+  width: 25%;
+}
+.fortyFivePercentWidth {
+  width: 45%;
+}
+.quarterHeight {
+  height: 25%;
+}
+.tenPercentHeight {
+  height: 10%;
+}
+.fifteenPercentHeight {
+  height: 12%;
+}
+.eightyFivePercentHeight {
+  height: 88%;
+}
+
+.noResize {
+  resize: none;
+}
+
+textarea:focus {
+  outline: none;
+}
+.noShadow {
+  box-shadow: none;
+}
+.noBorder {
+  border: none;
+}
+
+.redBorder {
+  border-color: red;
+  border-width: 5;
+}
+
+.overlayOverflow {
+  overflow: overlay;
+}
+
+.zeroZIndex {
+  z-index: 0;
+}
+
+.wrap{
+  flex-wrap: wrap;
+}
+.nowrap{
+  flex-wrap: nowrap;
+}
+
+/*.resizeModeContain {
+  resize-mode: 'contain'
+}
+resizeModeCover {
+  resizeMode: 'cover'
+}
+*/
+.visibleOverflow {
+  overflow: visible;
+}
+.absolutePosition {
+  position: absolute;
+}
+.relativePosition {
+  position: relative;
+}
+
+.blockDisplay {
+  display: block;
+}
+
+.bottom {
+  bottom: 0;
+}
+
+
+.autoOverflow {
+  overflow: auto;
+}
+
+.scroll {
+/*  overflow: auto;
+*/
+overflow-y: auto;
+
+}
+
+.clearBoth {
+  clear: both;
+}
+
+.fiveHundredPixelHeight{
+  height: 300px;
+}
+
+.bottomPlacement {
+  bottom: 0;
+}
+
+.lowercase {
+  text-transform: none;
+
+}
+.bottomPlacement2 {
+  bottom: -100
+}
+.topPlacement2 {
+  top: -167
+}
+
+.offsetFromTop {
+  top: -100
+}
+
+
+
+.flexWrap {
+/*   flexShrink: 1;
+*/  
+  flex-wrap: wrap;
+}
+
+.noPointerEvents {
+  pointer-events: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.pointer:hover{
+    background-color:rgba(0,0,0,0.5); /*where 0.5 stands for 50% opacity*/
+}
+
+/*@font-face {
+  font-family: 'cooperBlack';
+  src: url(./assets/fonts/cooperBlack.ttf);
+}
+*/
+/*@font-face {
+  font-family: 'hankenGrotesk';
+  src: url(./assets/fonts/HKGrotesk-Regular.ttf);
+}*/
+
+
+/*.cooperBlackText {
+  font-family: 'cooperBlack';
+
+}*/
+/*.hankenGroteskFont {
+  font-family: 'hankenGrotesk'
+}
+*/
+.largeFont {
+  font-size: 2em;
+}
+.superLargeFont {
+  font-size: 6em;
+}
+.trademarkText {
+  font-family: Verdana;
+}
+
+.cover {
+  background-size: cover;
+}
+
+.thinBorder {
+  border: 1px solid gray;
+}
+
+.noBorderColor {
+  border-color: transparent;
+  border: 0px solid transparent;
+
+}
+
+
+/*.memeStyle {
+  fontFamily: 'MemeFont';
+  color: 'white';
+  textShadowRadius: 0;
+  textShadowColor: '#000';
+  shadowOpacity: 0;
+  fontSize: 20
+
+}*/
+/*offsetTop {
+  textShadowOffset { width: 0, height: -1 }
+}
+offsetBottom {
+  textShadowOffset { width: 0, height: 1 }
+}
+offsetSide1 {
+  textShadowOffset { width: 1, height: 0 }
+}
+offsetSide2 {
+  textShadowOffset { width: -1, height: 0 }
+}
+*/
+
+/*
+div {
+  height: 100%;
+}
+*/
+
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+#root {
+  height: 100%;
+
+}
+
+body {
+/*  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;*/
+
+
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+
+
+}
+
+code {
+/*  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+*/}
+
+

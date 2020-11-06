@@ -1,0 +1,10 @@
+---
+inject: true
+to: frontend/src/actions/NetworkActions.js
+skip_if: "export const <%= h.changeCase.constant(functionName) %> = '<%= h.changeCase.constant(functionName) %>';"
+before: "// Constants set above"
+---
+// Partially Generated Code
+export const <%= h.changeCase.constant(functionName) %> = '<%= h.changeCase.constant(functionName) %>';
+export const <%= h.changeCase.constant(functionName) %>_COMPLETED = '<%= h.changeCase.constant(functionName) %>_COMPLETED';
+export const <%= h.changeCase.constant(functionName) %>_FAILED = '<%= h.changeCase.constant(functionName) %>_FAILED';

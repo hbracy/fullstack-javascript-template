@@ -1,0 +1,18 @@
+---
+to: backend/routes/<%= name %>-controller.js
+unless_exists: true
+---
+
+// Partially Generated Code
+const <%= h.changeCase.pascal(name, {splitRegexp: /-/g}) %>Tracker = require('../models/<%= name %>-tracker')
+const <%= h.changeCase.camel(name, {splitRegexp: /-/g}) %>sAPI = require('../database/database-apis/<%= name %>s-api');
+
+// Optional, for state keeping between clients
+let <%= h.changeCase.camel(name, {splitRegexp: /-/g}) %>Tracker = new <%= h.changeCase.pascal(name, {splitRegexp: /-/g}) %>Tracker();
+
+function <%= h.changeCase.camel(name, {splitRegexp: /-/g}) %>Controller(router) {
+	
+}
+// TODO
+
+module.exports = <%= h.changeCase.camel(name, {splitRegexp: /-/g}) %>Controller

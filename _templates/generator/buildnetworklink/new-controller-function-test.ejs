@@ -1,0 +1,26 @@
+---
+inject: true
+to: backend/routes/tests/<%= name %>-controller.test.js
+skip_if: "<%= functionName %>"
+after: "// Tests:"
+---
+  // Partially Generated Code
+  describe('#/<%= functionName %>', () => {
+    it('should <%= functionName %>', async () => {
+      const <%= inputName %> = {
+        param1: param1,
+        param2: param2
+      }
+      const options = {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
+      }
+
+      axios.post(process.env.URL + '/<%= functionName %>', <%= inputName %>, options).then(response => {
+        // TODO
+        // Example:
+        // assert.equal(<%= outputName %>, true);
+      }).catch(err => console.error(err))
+    });
+  });

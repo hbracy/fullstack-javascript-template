@@ -1,0 +1,19 @@
+---
+to: backend/database/tests/<%= name %>s-api.test.js
+unless_exists: true
+---
+// Partially Generated Code
+const assert = require('assert');
+const coreDb = require('../core-db');
+let <%= h.changeCase.camel(name, {splitRegexp: /-/g}) %>sAPI = require('../../database/database-apis/<%= name %>s-api.js');
+
+describe('#/<%= Name %> Database API', () => {
+  const existingTestUser = { 
+    email: 'test3', 
+    _id: '5ea1d04ea1dca8463ccbd60b', 
+    adminLevel: 1 
+  };
+  // Tests:
+
+});
+

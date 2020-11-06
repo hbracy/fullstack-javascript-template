@@ -1,0 +1,23 @@
+---
+inject: true
+to: backend/database/database-apis/<%= name %>s-api.js
+skip_if: "function <%= functionName %>"
+before: "module.exports"
+---
+
+// Partially Generated Code
+async function <%= functionName %>(<%= inputName %>) {
+  const db = await coreDb.getOrConnect();
+  let payload = null;
+  console.log('TODO: Write db query at backend/database/database-apis/<%= name %>s-api.js for input', <%= inputName %>)
+  try {
+    // TODO
+    // Example: 
+    // payload = await db.collection('<%=  h.changeCase.camel(name, {splitRegexp: /-/g}) %>s').findOne({'_id': new ObjectId(<%= inputName %>)});
+
+  } catch (err) {
+    console.error(err);
+    payload = false;
+  }
+  return payload;
+}

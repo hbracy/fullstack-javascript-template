@@ -1,0 +1,8 @@
+---
+inject: true
+to: backend/database/database-apis/<%= name %>s-api.js
+skip_if: "<%= functionName %>: <%= functionName %>,"
+after: "module.exports"
+---
+
+  <%= functionName %>: <%= functionName %>,

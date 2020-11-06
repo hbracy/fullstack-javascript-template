@@ -1,0 +1,25 @@
+---
+to: backend/models/<%= name %>-tracker.js
+unless_exists: true
+---
+
+// Partially Generated Code
+let <%= h.changeCase.camel(name, {splitRegexp: /-/g}) %>sAPI = require('../database/database-apis/<%= name %>s-api.js');
+const consoleDBLog = require('../tools').consoleDBLog;
+
+function <%= h.changeCase.pascal(name, {splitRegexp: /-/g}) %>Tracker() {
+
+	// TODO
+	// Example:
+  // this.sendMessage = async function sendMessage(fromEmail, conversationId, message) {
+  //   // console.log(fromEmail, toEmail, conversationId, message);
+  //   let newMessage = await messagesAPI.sendMessage(fromEmail, conversationId, message);
+  //   return  newMessage
+  // }
+
+  return this;
+}
+
+
+module.exports = <%= h.changeCase.pascal(name, {splitRegexp: /-/g}) %>Tracker
+

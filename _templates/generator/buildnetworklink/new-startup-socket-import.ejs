@@ -1,0 +1,8 @@
+---
+inject: true
+to: backend/startup/register-routes.js
+skip_if: "<%= name %>"
+after: "// Imports"
+---
+
+let <%= h.changeCase.camel(name, {splitRegexp: /-/g}) %>Controller = require('../routes/<%= name %>-controller.js');

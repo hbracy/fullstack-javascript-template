@@ -1,0 +1,15 @@
+---
+inject: true
+to: backend/models/<%= name %>-tracker.js
+skip_if: "function <%= functionName %>"
+before: "return this"
+---
+
+  // Partially Generated Code
+  this.<%= functionName %> = async function <%= functionName %>(<%= inputName %>) {
+    console.log('data', <%= inputName %>);
+    // TODO
+    let payload = await <%= h.changeCase.camel(name, {splitRegexp: /-/g}) %>sAPI.<%= functionName %>(<%= inputName %>);
+    // console.log('payload', payload);
+    return payload;
+  }

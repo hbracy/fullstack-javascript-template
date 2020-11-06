@@ -1,0 +1,15 @@
+---
+inject: true
+to: backend/routes/<%= name %>-controller.js
+skip_if: "/<%= functionName %>"
+after: "{"
+---
+
+// Partially Generated Code
+  router.post('/<%= functionName %>', async (req, res) => {
+    // console.log('<%= functionName %>', req.body);
+    let <%= inputName %> = req.body;
+    // TODO
+    let payload = await <%= h.changeCase.camel(name, {splitRegexp: /-/g}) %>sAPI.<%= functionName %>(<%= inputName %>);
+    res.send(payload);
+  });

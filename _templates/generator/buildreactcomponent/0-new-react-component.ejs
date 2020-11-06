@@ -1,0 +1,31 @@
+---
+to: frontend/src/components/<%= name %>.js
+unless_exists: true
+---
+// Partially Generated Code
+import * as React from 'react';
+import { connect } from 'react-redux';
+import { makeStyles } from '@material-ui/core/styles';
+import { } from '../actions/NetworkActions.js';
+import MyContainer from './MyContainer';
+
+const useStyles = makeStyles((theme) => ({
+  // TODO
+}));
+
+
+function <%= name %>(props) {
+  const classes = useStyles();
+
+  return (
+    <MyContainer>
+    </MyContainer>
+  );
+}
+
+function mapStateToProps(state) {
+  return {
+    // prop: state.NetworkReducer.stateItem,
+  };
+}
+export default connect(mapStateToProps)(<%= name %>);

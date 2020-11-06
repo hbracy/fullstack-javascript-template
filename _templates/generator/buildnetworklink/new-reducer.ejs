@@ -1,0 +1,26 @@
+---
+inject: true
+to: frontend/src/reducers/NetworkReducer.js
+skip_if: "<%= h.changeCase.constant(functionName) %>"
+before: "default:"
+---
+    // Partially Generated Code
+    case '<%= h.changeCase.constant(functionName) %>':
+      console.log('DISPATCHING <%= h.changeCase.constant(functionName) %>');
+      return {
+        ...state,
+        <%= functionName %>: true,
+      }
+    case '<%= h.changeCase.constant(functionName) %>_COMPLETED':
+      console.log('DISPATCHING <%= h.changeCase.constant(functionName) %>_COMPLETED');
+      return {
+        ...state,
+        <%= outputName %>: action.<%= outputName %>,
+        <%= functionName %>: false,
+      }
+    case '<%= h.changeCase.constant(functionName) %>_FAILED':
+      console.log('DISPATCHING <%= h.changeCase.constant(functionName) %>_FAILED');
+      return {
+        ...state,
+        <%= functionName %>: false,
+      }
