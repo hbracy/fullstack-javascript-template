@@ -2,7 +2,7 @@
 
 ## Setup
 ```shell
-git clone https://github.com/hbracy/template.git/
+git clone https://github.com/hbracy/fullstack-javascript-template.git
 cd template/frontend && npm install
 cd ../backend && npm install
 ```
