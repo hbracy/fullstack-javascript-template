@@ -18,6 +18,11 @@ cd ../backend && npm install
 You must create a `.env` file at `frontend/.env` and set the `REACT_APP_URL` environment variable. This corresponds to the url:port of the backend. An example of a `.env` file would be:
 ```REACT_APP_URL=http://localhost:3000```
 
+You must also ensure you have MongoDB installed at the url `mongodb://localhost/title`. Once you do, go to `backend/database/core-db.js` and change `'template'` with your db name here: 
+```js
+connection = db.db('template');
+```
+
 ## Booting
 To start the backend:
 `cd backend && node app.js`
