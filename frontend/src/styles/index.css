@@ -277,6 +277,10 @@ zIndex5 {
 /*  height: Dimensions.get('window').height * 0.8*/
   height: 80vh;
 }
+.fourPixelHeight {
+  min-height: 4px;
+}
+
 /*
 base1 {
   backgroundColor: theme.base1

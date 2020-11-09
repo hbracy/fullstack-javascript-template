@@ -1,6 +1,7 @@
 const initialState = {
   outputData: null, // Partially Generated Code
   testGeneratedCode: false, // Partially Generated Code
+  isInProgress: false,
 }
 
 export default function networkReducer(state = initialState, action) {
@@ -12,6 +13,7 @@ export default function networkReducer(state = initialState, action) {
       return {
         ...state,
         testGeneratedCode: true,
+        isInProgress: true,
       }
     case 'TEST_GENERATED_CODE_COMPLETED':
       console.log('DISPATCHING TEST_GENERATED_CODE_COMPLETED');
@@ -19,12 +21,14 @@ export default function networkReducer(state = initialState, action) {
         ...state,
         outputData: action.outputData,
         testGeneratedCode: false,
+        isInProgress: false,
       }
     case 'TEST_GENERATED_CODE_FAILED':
       console.log('DISPATCHING TEST_GENERATED_CODE_FAILED');
       return {
         ...state,
         testGeneratedCode: false,
+        isInProgress: false,
       }
     default:
       return state;
