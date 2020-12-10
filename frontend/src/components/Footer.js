@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Copyright from './Copyright'
+import MyContainer from './MyContainer';
 
 const useStyles = makeStyles((theme) => ({
   footer: {
@@ -17,6 +18,8 @@ function Footer(props) {
   const classes = useStyles();
 
   return (
+        <MyContainer className={' ' + props.className}>
+
     <footer className={classes.footer}>
       <Container maxWidth="lg">
         <Typography
@@ -30,6 +33,7 @@ function Footer(props) {
         <Copyright title={props.title} />
       </Container>
     </footer>
+    </MyContainer>
   );
 }
 

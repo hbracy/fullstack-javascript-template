@@ -1,17 +1,16 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import Notifications from 'react-notification-system-redux';
-import Container from '@material-ui/core/Container';
+import MyContainer from './MyContainer';
 import TestComponent from './TestComponent';
 import ProgressIndicator from './ProgressIndicator';
 
 function Main(props) {
   return (
-    <Container>
-      <ProgressIndicator />
+    <MyContainer className={' ' + props.className}>
       <TestComponent />
       <Notifications notifications={props.notifications} />
-    </Container>
+    </MyContainer>
   );
 }
 

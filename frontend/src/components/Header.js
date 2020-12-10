@@ -6,6 +6,7 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
+import MyContainer from './MyContainer';
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
@@ -26,7 +27,7 @@ function Header(props) {
   const classes = useStyles();
 
   return (
-    <React.Fragment>
+    <MyContainer className={' ' + props.className}>
       <Toolbar className={classes.toolbar}>
         <Typography
           component="h2"
@@ -39,7 +40,7 @@ function Header(props) {
           {props.title}
         </Typography>
       </Toolbar>
-    </React.Fragment>
+    </MyContainer>
   );
 }
 

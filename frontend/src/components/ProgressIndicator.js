@@ -16,8 +16,8 @@ function ProgressIndicator(props) {
   const classes = useStyles();
 
   return (
-    <div>
-      { !props.isInProgress && <div className='fourPixelHeight'></div> }
+    <div className='fullWidth fourPixelHeight'>
+      { !props.isInProgress && <div className='fullWidth fourPixelHeight'></div> }
       <div className={classes.root}>
         { props.isInProgress && <LinearProgress /> }
       </div>

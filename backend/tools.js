@@ -30,7 +30,7 @@ async function generateToken(user) {
     });
     return token;
   } catch (err) {
-    console.err(err);
+    console.error(err);
     return false;
   }
 
