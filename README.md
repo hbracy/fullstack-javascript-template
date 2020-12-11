@@ -70,11 +70,18 @@ systemctl status nginx
 	* Creating a sites-available: `nano /etc/nginx/sites-available/<domain>` With the following content:
 		```
 		server {
-	   		server_name <domain>.com www.<domain>.com;
-	   		root /root/<branch>/build;
-	   		location / {
-	     		alias /root/<branch>/frontend/build/;
-	   		}
+		   server_name <domain> www.<domain>;
+		   location / {
+		        alias /root/<projectdir>/frontend/build/;
+		   }
+		   location /backend/ {
+		         proxy_pass http://localhost:3000/;
+		         proxy_set_header Host $host;
+		         proxy_set_header Upgrade $http_upgrade;
+		         proxy_set_header Connection 'upgrade';
+		         proxy_http_version 1.1;
+		         proxy_cache_bypass $http_upgrade;
+		    }
 		}
 		```
 	* Enable the sites-available file by symlinking it with sites-enabled: `sudo ln -s /etc/nginx/sites-available/<domain> /etc/nginx/sites-enabled`
